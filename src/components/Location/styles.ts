@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const LocationBox = styled.div`
+export const Wrapper = styled.div`
   ${({ theme }) => css`
     padding-top: ${theme.spacings.medium};
     display: flex;

@@ -13,7 +13,7 @@ export type LocationProps = {
 
 const Location = ({ origin, location }: LocationProps) => {
   return (
-    <S.LocationBox>
+    <S.Wrapper>
       <S.Origin>
         <S.LocationTitle>Origin</S.LocationTitle>
         <S.LocationInfo>
@@ -48,7 +48,7 @@ const Location = ({ origin, location }: LocationProps) => {
           </S.LocationInfoItem>
         </S.LocationInfo>
       </S.Location>
-    </S.LocationBox>
+    </S.Wrapper>
   )
 }
 
