@@ -6,7 +6,8 @@ export default {
   border: {
     radius: {
       medium: '0.2rem',
-      large: '0.3rem'
+      large: '0.3rem',
+      huge: '1rem'
     }
   },
   font: {
@@ -27,14 +28,14 @@ export default {
   },
   colors: {
     primary: '#234DD4',
-    secondary: '#43C370',
     mainBg: '#F2F2F2',
     white: '#FAFAFA',
     black: '#030517',
-    lightGray: '#EAEAEA',
-    gray: '#8F8F8F',
-    darkGray: '#2E2F42',
-    red: '#e0203b'
+    lightGray: '#a2afc3',
+    gray: '#718096',
+    darkGray: '#353f4c',
+    red: '#e0203b',
+    green: '#43C370'
   },
   spacings: {
     xxxsmall: '0.4rem',
