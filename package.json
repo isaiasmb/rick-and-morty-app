@@ -9,6 +9,10 @@
     "lint": "eslint src --max-warnings=0",
     "test": "jest",
     "test:watch": "yarn test --watch",
+    "schema:download": "apollo client:download-schema --endpoint=https://rickandmortyapi.com/graphql schema-temp.gql",
+    "schema:convert": "node convertToNonNull.js",
+    "codegen": "apollo codegen:generate --target typescript --excludes=node_modules/ --includes=src/graphql/**/*.ts --localSchemaFile schema.gql --tagName=gql --outputFlat src/graphql/generated",
+    "types:generate": "yarn schema:download && yarn schema:convert && yarn codegen",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public"
@@ -25,6 +29,8 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "^3.7.11",
+    "lodash": "^4.17.21",
     "next": "11.0.1",
     "next-pwa": "^5.2.21",
     "polished": "^4.2.2",
@@ -47,9 +53,11 @@
     "@types/styled-components": "^5.1.11",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
+    "apollo": "^2.34.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.11.1",
     "eslint": "^7.32.0",
+    "eslint-config-next": "^13.2.4",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.24.0",
