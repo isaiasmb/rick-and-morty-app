@@ -76,7 +76,7 @@ export const Species = styled.span`
   `}
 `
 
-export const Episodies = styled.p`
+export const Episodies = styled.span`
   ${({ theme }) => css`
     padding-top: ${theme.spacings.medium};
   `}
@@ -87,5 +87,25 @@ export const AmountOfEpisodies = styled.span`
     color: ${theme.colors.primary};
     cursor: pointer;
     text-decoration: underline;
+  `}
+`
+
+export const Episodes = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    padding: ${theme.spacings.small} ${theme.spacings.xsmall};
+    margin-top: ${theme.spacings.xxsmall};
+    max-height: 40rem;
+    overflow: scroll;
+    border-radius: ${theme.border.radius.huge};
+    background-color: ${lighten(0.15, theme.colors.lightGray)};
+  `}
+`
+
+export const EpisodeName = styled.span`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    padding-bottom: ${theme.spacings.xxsmall};
   `}
 `
