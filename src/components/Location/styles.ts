@@ -1,3 +1,4 @@
+import { ellipsis } from 'polished'
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -13,10 +14,13 @@ export const Origin = styled.div`
   width: 50%;
 `
 
-export const Location = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+export const LocationBox = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: ${theme.spacings.xxsmall};
+  `}
 `
 
 export const LocationTitle = styled.span`
@@ -46,5 +50,7 @@ export const Title = styled.span`
 export const Value = styled.span`
   ${({ theme }) => css`
     color: ${theme.colors.darkGray};
+    font-size: ${theme.font.sizes.small};
+    ${ellipsis('95%')}
   `}
 `

@@ -1,5 +1,3 @@
-import { LocationProps } from '.'
-
 export default {
   origin: {
     name: 'origin - Earth (C-137)',
@@ -11,4 +9,4 @@ export default {
     dimension: 'location - locationDimension C-137',
     amountOfResidents: 58
   }
-} as LocationProps
+}

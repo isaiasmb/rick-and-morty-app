@@ -21,4 +21,20 @@ describe('<Location />', () => {
       screen.getByText(mock.location.amountOfResidents)
     ).toBeInTheDocument()
   })
+
+  it('should not render when there is no info', () => {
+    renderWithTheme(<Location origin={{}} location={{}} />)
+
+    expect(screen.queryByText(mock.origin.name)).not.toBeInTheDocument()
+    expect(screen.queryByText(mock.origin.dimension)).not.toBeInTheDocument()
+    expect(
+      screen.queryByText(mock.origin.amountOfResidents)
+    ).not.toBeInTheDocument()
+
+    expect(screen.queryByText(mock.location.name)).not.toBeInTheDocument()
+    expect(screen.queryByText(mock.location.dimension)).not.toBeInTheDocument()
+    expect(
+      screen.queryByText(mock.location.amountOfResidents)
+    ).not.toBeInTheDocument()
+  })
 })
