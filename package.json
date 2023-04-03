@@ -68,7 +68,7 @@
     "lint-staged": "^10.4.0",
     "plop": "^2.7.4",
     "prettier": "^2.1.2",
-    "react-is": "^16.13.1",
+    "react-is": "^18.2.0",
     "typescript": "4.3.4"
   }
 }
